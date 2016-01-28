@@ -33,6 +33,7 @@ describe Oystercard do
     end
 
     it 'returns true if the oystercard has been touched in' do
+      oystercard.top_up(Oystercard::MAX_BALANCE)
       oystercard.touch_in(entry_station)
       expect(oystercard).to be_in_journey
     end
